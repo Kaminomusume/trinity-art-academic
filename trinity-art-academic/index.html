@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trinity Art Academic | Soluciones Académicas, Investigación e IA</title>
+  <meta name="description" content="Servicios académicos integrales en Panamá: Tesis, monografías, trabajos universitarios y escolares, videos educativos y mini-documentales con IA, Imperial Academy y alianza Metas Center." />
+  
+  <link rel="icon" type="image/png" href="metascenter-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #080b12;
+      --bg-card: #101626;
+      --bg-card-hover: #172138;
+      --accent-red: #e63946;
+      --accent-cyan: #00d4ff;
+      --text-cream: #fbf9f5;
+      --text-muted: #9aa8be;
+      --border-subtle: rgba(255, 255, 255, 0.09);
+      --border-glow: rgba(0, 212, 255, 0.35);
+      --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(0, 212, 255, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 90% 30%, rgba(230, 57, 70, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(244, 162, 97, 0.06) 0%, transparent 50%),
+        radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px;
+    }
+
+    h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+
+    .top-bar {
+      background: linear-gradient(90deg, rgba(230, 57, 70, 0.2), rgba(0, 212, 255, 0.2));
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.82rem;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: var(--text-cream);
+    }
+
+    .top-bar a {
+      color: var(--accent-cyan);
+      text-decoration: underline;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 11, 18, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .brand-logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    .brand-logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand-info { display: flex; flex-direction: column; }
+
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--text-cream);
+      line-height: 1.1;
+    }
+
+    .brand-title span { color: var(--accent-cyan); }
+
+    .brand-sub {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-red);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    nav { display: flex; gap: 1.4rem; align-items: center; }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    nav a:hover { color: var(--accent-cyan); }
+
+    .btn-wa-header {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff !important;
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-wa-header:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .hero {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.35);
+      color: var(--accent-cyan);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5.5vw, 3.8rem);
+      line-height: 1.15;
+      margin-bottom: 1.3rem;
+      font-weight: 800;
+    }
+
+    .hero h1 em {
+      color: var(--accent-cyan);
+      font-style: italic;
+      background: linear-gradient(120deg, var(--accent-cyan), #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 2.2rem;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-red), #b81d28);
+      color: #fff;
+      padding: 0.95rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 18px rgba(230, 57, 70, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(230, 57, 70, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      color: var(--text-cream);
+      padding: 0.95rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 212, 255, 0.12);
+      border-color: var(--accent-cyan);
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      padding: 1.8rem;
+      background: rgba(16, 22, 38, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      margin-top: 1.5rem;
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem;
+    }
+
+    .section-header { text-align: center; margin-bottom: 2.8rem; }
+
+    .section-header span {
+      color: var(--accent-cyan);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      margin-top: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0.8rem auto 0;
+      font-size: 1.02rem;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 2.8rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tab-btn:hover {
+      background: rgba(0, 212, 255, 0.12);
+      color: var(--text-cream);
+      border-color: rgba(0, 212, 255, 0.4);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.22), rgba(0, 212, 255, 0.08));
+      border-color: var(--accent-cyan);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    }
+
+    .tab-content { display: none; }
+
+    .tab-content.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-glow);
+      background: var(--bg-card-hover);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-tag {
+      font-size: 0.76rem;
+      color: var(--accent-red);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.7rem;
+    }
+
+    .card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+      color: var(--text-cream);
+      line-height: 1.25;
+    }
+
+    .card p.card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 1.8rem;
+      color: var(--text-cream);
+      font-size: 0.94rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.65rem;
+      padding-left: 1.35rem;
+      position: relative;
+      color: #d8e2ec;
+    }
+
+    .card ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+      font-size: 0.8rem;
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 0.85rem 1.2rem;
+      border-radius: 10px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #4eed84;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .card-cta:hover {
+      background: #25D366;
+      color: #080b12;
+      border-color: #25D366;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+    }
+
+    .partner-section {
+      background: linear-gradient(180deg, transparent, rgba(16, 22, 38, 0.6), transparent);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 5rem 1.5rem;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.2rem;
+    }
+
+    .feature-box {
+      background: linear-gradient(145deg, #131929, #0c101c);
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .feature-box:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+    }
+
+    .feature-box.partner { border-color: rgba(230, 57, 70, 0.35); }
+    .feature-box.partner:hover { border-color: var(--accent-red); }
+
+    .feature-box h3 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+
+    .feature-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.6rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .partner-header-flex {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .partner-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 3px;
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    .partner-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .separation-banner {
+      background: rgba(230, 57, 70, 0.08);
+      border: 1px solid rgba(230, 57, 70, 0.3);
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin-top: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .separation-text h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-cream);
+    }
+
+    .separation-text p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .quote-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 780px;
+      margin: 0 auto;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .nav-container { flex-direction: column; text-align: center; }
+      nav { flex-wrap: wrap; justify-content: center; }
+    }
+
+    .form-group { margin-bottom: 1.3rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-cream);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      background: #080b12;
+      color: var(--text-cream);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.25);
+    }
+
+    .wa-floating {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 62px;
+      height: 62px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .wa-floating:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .wa-floating svg { width: 34px; height: 34px; fill: #ffffff; }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      background: #06080e;
+      padding: 3.5rem 1.5rem 2.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NÚMERO DIRECTO DE WHATSAPP: Panamá 507 + 68118430 -->
+  <script>
+    const WHATSAPP_NUMBER = "50768118430";
+    function waLink(mensaje) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
+    }
+  </script>
+
+  <!-- Barra de Notificación Superior -->
+  <div class="top-bar">
+    🎓 <strong>Trinity Art Academic</strong> • Excelencia en investigación, sustentación y producción con IA en Panamá
+    <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo una consulta rápida.'), '_blank')">Consultar por WhatsApp 💬</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-logo-badge">
+          <img src="metascenter-logo.png" alt="Metas Center & Trinity Art" />
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Trinity Art <span>Academic</span></span>
+          <span class="brand-sub">Investigación • Educación • Innovación IA</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#academy">Imperial Academy</a>
+        <a href="#metas-center">Alianza Metas Center</a>
+        <a href="#cotizar">Cotizador</a>
+        <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, me gustaría cotizar un servicio académico.'), '_blank')" class="btn-wa-header">
+          <span>WhatsApp Directo</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="badge-hero">
+        <span>✦ Rigor Académico • Creatividad • Inteligencia Artificial ✦</span>
+      </div>
+      <h1>Transformamos tus investigaciones en proyectos <em>académicos y visuales</em> de máximo nivel</h1>
+      <p>
+        Asesoría especializada para estudiantes universitarios, bachillerato, docentes y profesionales en Panamá. Desde redacción metodológica con normas APA/IEEE hasta presentaciones de sustentación, material escolar y mini-documentales educativos con IA.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="#servicios" class="btn-primary">Ver Portafolio de Servicios</a>
+        <a href="#cotizar" class="btn-secondary">Solicitar Cotización Inmediata</a>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="trust-strip">
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Personalizado & Anti-Plagio</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">APA 7 / IEEE</div>
+          <div class="stat-label">Normativas Oficiales</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">IA + Creatividad</div>
+          <div class="stat-label">Videos y Presentaciones</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">+507 6811-8430</div>
+          <div class="stat-label">Atención Inmediata</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICIOS CON PESTAÑAS INTERACTIVAS -->
+    <section id="servicios">
+      <div class="section-header">
+        <span>Catálogo Especializado</span>
+        <h2>Soluciones a la medida de tu nivel académico</h2>
+        <p>Selecciona tu categoría de interés y solicita cotización directa por WhatsApp con atención personalizada.</p>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'universitarios')">
+          🎓 Trabajos Universitarios & Posgrado
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'escolares')">
+          🎒 Trabajos Escolares & Bachillerato
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'audiovisual')">
+          🎬 Audiovisual & IA Educativa
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'consultoria')">
+          📊 Análisis & Corrección
+        </button>
+      </div>
+
+      <!-- TAB 1: UNIVERSITARIOS -->
+      <div id="universitarios" class="tab-content active">
+        <div class="card">
+          <div>
+            <div class="card-tag">Tesis & Grado</div>
+            <h3>Tesis, Monografías y Proyectos de Grado</h3>
+            <p class="card-desc">Acompañamiento estructural desde la idea inicial hasta las conclusiones.</p>
+            <ul>
+              <li>Planteamiento del problema, hipótesis y justificación.</li>
+              <li>Marco teórico, antecedentes y estado del arte.</li>
+              <li>Diseño metodológico cualitativo y cuantitativo.</li>
+              <li>Aplicación estricta de normas APA (7.ª ed.), Vancouver o IEEE.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito cotizar asesoría para una tesis o proyecto de grado universitario.'), '_blank')" class="card-cta">
+            Cotizar Tesis por WhatsApp 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Exposiciones & Defensa</div>
+            <h3>Presentaciones de Sustentación Ejecutivas</h3>
+            <p class="card-desc">Diapositivas de alto impacto visual y oratoria para defender tu trabajo con éxito.</p>
+            <ul>
+              <li>Diseño en PowerPoint, Canva o Keynote profesional.</li>
+              <li>Síntesis visual de resultados, gráficos y diagramas de flujo.</li>
+              <li>Guion estructurado minuto a minuto para tu defensa oral.</li>
+              <li>Tarjetas guía de oratoria y posibles preguntas de jurado.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, me interesa cotizar una presentación para sustentación de tesis o grado.'), '_blank')" class="card-cta">
+            Cotizar Presentación por WhatsApp 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Artículos & Revisiones</div>
+            <h3>Ensayos Críticos y Artículos Científicos</h3>
+            <p class="card-desc">Redacción rigurosa, argumentativa y debidamente respaldada por literatura indexada.</p>
+            <ul>
+              <li>Ensayos argumentativos, filosóficos y de actualidad.</li>
+              <li>Artículos científicos formato IMRyD para publicación.</li>
+              <li>Revisión sistemática de literatura (Scopus, SciELO, Redalyc).</li>
+              <li>Citas bibliográficas verificadas con gestores (Mendeley/Zotero).</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo cotizar un ensayo crítico o artículo universitario.'), '_blank')" class="card-cta">
+            Cotizar Ensayo por WhatsApp 💬
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 2: ESCOLARES -->
+      <div id="escolares" class="tab-content">
+        <div class="card">
+          <div>
+            <div class="card-tag">Primaria & Secundaria</div>
+            <h3>Tareas, Talleres y Cuestionarios Guiados</h3>
+            <p class="card-desc">Apoyo puntual y didáctico para que el estudiante comprenda y apruebe sus materias.</p>
+            <ul>
+              <li>Resolución explicada paso a paso de talleres y módulos.</li>
+              <li>Redacción de composiciones, biografías y resúmenes literarios.</li>
+              <li>Guías de estudio sintetizadas para preparación de exámenes.</li>
+              <li>Entregas ordenadas y puntuales con formato impecable.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito cotizar un trabajo o tarea escolar.'), '_blank')" class="card-cta">
+            Consultar Trabajo Escolar 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Creatividad & Manualidades</div>
+            <h3>Trípticos, Folletos y Láminas Ilustrativas</h3>
+            <p class="card-desc">Material visual llamativo y profesional para ferias científicas y murales.</p>
+            <ul>
+              <li>Diseño de trípticos y dípticos informativos listos para imprimir.</li>
+              <li>Láminas educativas digitales e ilustradas en alta resolución.</li>
+              <li>Líneas de tiempo históricas, infografías y mapas conceptuales.</li>
+              <li>Asesoría visual para maquetas y stands de proyectos.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, me interesa cotizar un tríptico, lámina o material escolar visual.'), '_blank')" class="card-cta">
+            Consultar Tríptico / Lámina 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Presentaciones Escolares</div>
+            <h3>Diapositivas y Exposiciones Infantiles/Juveniles</h3>
+            <p class="card-desc">Exposiciones dinámicas adaptadas a la edad del estudiante para captar la atención de la clase.</p>
+            <ul>
+              <li>Diapositivas interactivas con ilustraciones y animaciones.</li>
+              <li>Fichas resumen para que el alumno exponga con confianza.</li>
+              <li>Diseño temático según la asignatura (ciencias, historia, cívica).</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo cotizar una presentación para exposición escolar.'), '_blank')" class="card-cta">
+            Consultar Presentación 💬
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 3: AUDIOVISUAL & IA -->
+      <div id="audiovisual" class="tab-content">
+        <div class="card">
+          <div>
+            <div class="card-tag">Innovación Diferencial</div>
+            <h3>Mini-Documentales Académicos con IA</h3>
+            <p class="card-desc">Tu investigación llevada al formato documental cinematográfico. El impacto máximo para notas sobresalientes.</p>
+            <ul>
+              <li>Guion investigativo con estructura narrativa profesional.</li>
+              <li>Generación de imágenes y escenas hiperrealistas con IA.</li>
+              <li>Locución profesional con voces naturales y subtitulado dinámico.</li>
+              <li>Banda sonora original y mezcla de sonido envolvente.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, quiero cotizar un mini-documental académico generado con IA.'), '_blank')" class="card-cta">
+            Cotizar Mini-Documental 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Educación Multimedia</div>
+            <h3>Animaciones Educativas y Cápsulas Explicativas</h3>
+            <p class="card-desc">Videos cortos dinámicos para explicar fórmulas, procesos biológicos o conceptos complejos.</p>
+            <ul>
+              <li>Cápsulas de 1 a 3 minutos ideales para redes o clase.</li>
+              <li>Presentadores virtuales / avatares con narración fluida.</li>
+              <li>Animación de gráficos, mapas y diagramas interactivos.</li>
+              <li>Material didáctico para docentes, tutores e instituciones.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, me interesa cotizar una animación o cápsula educativa con IA.'), '_blank')" class="card-cta">
+            Cotizar Animación 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Audio & Podcast</div>
+            <h3>Podcasts Educativos y Audio-Resúmenes</h3>
+            <p class="card-desc">Convierte libros enteros o tesis en episodios de audio profesionales para estudiar o divulgar.</p>
+            <ul>
+              <li>Formato entrevista o narrador temático.</li>
+              <li>Edición de audio limpia con efectos sonoros.</li>
+              <li>Guiones pedagógicos basados en tus fuentes.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, quiero cotizar un podcast educativo o audio-resumen.'), '_blank')" class="card-cta">
+            Cotizar Audio / Podcast 💬
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 4: CONSULTORÍA Y CORRECCIÓN -->
+      <div id="consultoria" class="tab-content">
+        <div class="card">
+          <div>
+            <div class="card-tag">Control de Calidad</div>
+            <h3>Corrección de Estilo & Formato APA/IEEE</h3>
+            <p class="card-desc">Si ya tienes tu trabajo escrito pero necesitas pulirlo antes de entregarlo al profesor o jurado.</p>
+            <ul>
+              <li>Corrección ortográfica, gramatical, sintaxis y coherencia.</li>
+              <li>Formateo de sangrías, márgenes, tablas, figuras y numeración.</li>
+              <li>Verificación cruzada de citas en texto vs. lista de referencias.</li>
+              <li>Informe de sugerencias de mejora y reducción de redundancias.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito cotizar corrección de estilo y normas APA para mi documento.'), '_blank')" class="card-cta">
+            Cotizar Corrección APA 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Idiomas & Traducción</div>
+            <h3>Traducción Académica Inglés ↔ Español</h3>
+            <p class="card-desc">Traducción técnica y especializada sin errores mecánicos de traductores automáticos.</p>
+            <ul>
+              <li>Traducción de abstracts, artículos científicos y capítulos.</li>
+              <li>Precisión en terminología de salud, finanzas, ingeniería y leyes.</li>
+              <li>Revisión por humanos para fluidez natural académica.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo cotizar una traducción académica Inglés-Español.'), '_blank')" class="card-cta">
+            Cotizar Traducción 💬
+          </a>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Análisis de Datos</div>
+            <h3>Procesamiento Estadístico & Tablas</h3>
+            <p class="card-desc">Tabulación de encuestas, interpretación de frecuencias y gráficos listos para tesis.</p>
+            <ul>
+              <li>Tabulación en Excel / SPSS / Google Sheets.</li>
+              <li>Gráficos circulares, de barras y correlaciones explicadas.</li>
+              <li>Interpretación textual de hallazgos estadísticos.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito apoyo con análisis estadístico y gráficos para mi tesis.'), '_blank')" class="card-cta">
+            Cotizar Análisis de Datos 💬
+          </a>
+        </div>
+      </div>
+
+      <!-- Separación de Marca: Trinity Art Handmade vs Academic -->
+      <div class="separation-banner">
+        <div class="separation-text">
+          <h4>🎨 ¿Buscas artículos artesanales, libretas y diseño creativo?</h4>
+          <p>Para encuadernación, journals físicos, agendas y detalles hechos a mano, visita nuestra tienda principal de Trinity Art.</p>
+        </div>
+        <a href="https://trinity-art-landing.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="border-color: rgba(230, 57, 70, 0.5);">
+          Ir a Trinity Art Artesanal ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- ALIANZAS: IMPERIAL ACADEMY & METAS CENTER -->
+    <section id="academy" class="partner-section">
+      <div class="section-header">
+        <span>Ecosistema de Formación & Alianzas</span>
+        <h2>Impulsando el crecimiento profesional y académico</h2>
+        <p>Unimos capacitación en herramientas del futuro con redes de apoyo para el éxito en tus metas.</p>
+      </div>
+
+      <div class="split-grid">
+        <!-- Imperial Academy -->
+        <div class="feature-box">
+          <div>
+            <div class="card-tag">Formación & Talleres Prácticos</div>
+            <h3>Imperial Academy</h3>
+            <p>
+              Nuestra división de aprendizaje orientada a que domines la tecnología. Aprende a utilizar herramientas de Inteligencia Artificial para potenciar tus estudios, redacción académica ética, diseño de presentaciones y productividad para destacar en la universidad y el trabajo.
+            </p>
+            <ul style="list-style: none; margin-bottom: 1.5rem; color: #cbd5e1; font-size: 0.94rem;">
+              <li style="margin-bottom: 0.5rem;">✦ Taller: IA aplicada a la investigación y redacción académica.</li>
+              <li style="margin-bottom: 0.5rem;">✦ Masterclass: Diseño de presentaciones de alto impacto.</li>
+              <li style="margin-bottom: 0.5rem;">✦ Productividad y organización de proyectos estudiantiles.</li>
+            </ul>
+          </div>
+          <a href="#" onclick="window.open(waLink('Hola, deseo información sobre los talleres y programas de Imperial Academy.'), '_blank')" class="btn-primary">
+            Consultar Programas de Imperial Academy 💬
+          </a>
+        </div>
+
+        <!-- Metas Center -->
+        <div id="metas-center" class="feature-box partner">
+          <div>
+            <div class="partner-header-flex">
+              <div class="partner-logo">
+                <img src="metascenter-logo.png" alt="Metas Center Oficial" />
+              </div>
+              <div>
+                <div class="card-tag">Alianza Oficial de Promoción</div>
+                <h3 style="margin-bottom: 0;">Metas Center</h3>
+              </div>
+            </div>
+            <p>
+              Trabajamos de la mano con <strong>Metas Center</strong> para conectar con estudiantes, profesionales y emprendedores comprometidos con alcanzar sus objetivos. Síguelos en Instagram para contenido de desarrollo, comunidad y novedades exclusivas.
+            </p>
+            <ul style="list-style: none; margin-bottom: 1.5rem; color: #cbd5e1; font-size: 0.94rem;">
+              <li style="margin-bottom: 0.5rem;">✦ Descuentos exclusivos para la comunidad de Metas Center.</li>
+              <li style="margin-bottom: 0.5rem;">✦ Asesorías académicas personalizadas referidas por el centro.</li>
+              <li style="margin-bottom: 0.5rem;">✦ Eventos y difusión conjunta de iniciativas educativas.</li>
+            </ul>
+          </div>
+          <a href="https://www.instagram.com/metascenter/?hl=es-la" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="border-color: rgba(230, 57, 70, 0.5);">
+            Visitar @metascenter en Instagram ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COTIZADOR RÁPIDO PARA WHATSAPP -->
+    <section id="cotizar" class="quote-section">
+      <div class="section-header">
+        <span>Cotizador Inteligente</span>
+        <h2>Cotiza tu trabajo en segundos</h2>
+        <p>Llena los datos clave y se abrirá tu WhatsApp listo con el mensaje estructurado para recibir una cotización precisa.</p>
+      </div>
+
+      <div class="quote-box">
+        <form onsubmit="enviarCotizacion(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nombre">Tu Nombre Completo *</label>
+              <input type="text" id="nombre" required placeholder="Ej. Carlos Mendoza" />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Número o Ciudad *</label>
+              <input type="text" id="telefono" required placeholder="Ej. Ciudad de Panamá / 6811-XXXX" />
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="categoria">Tipo de Servicio Académico *</label>
+              <select id="categoria">
+                <option value="Tesis / Monografía Universitaria">Tesis / Monografía Universitaria</option>
+                <option value="Presentación de Sustentación / Diapositivas">Presentación de Sustentación / Diapositivas</option>
+                <option value="Ensayo / Artículo Científico">Ensayo / Artículo Científico</option>
+                <option value="Trabajo Escolar / Tareas de Secundaria">Trabajo Escolar / Tareas de Secundaria</option>
+                <option value="Tríptico / Lámina Ilustrada">Tríptico / Lámina Ilustrada</option>
+                <option value="Mini-Documental o Video con IA">Mini-Documental o Video con IA</option>
+                <option value="Animación o Cápsula Educativa">Animación o Cápsula Educativa</option>
+                <option value="Corrección de Estilo / Normas APA">Corrección de Estilo / Normas APA</option>
+                <option value="Traducción Académica Inglés ↔ Español">Traducción Académica Inglés ↔ Español</option>
+                <option value="Cursos / Talleres Imperial Academy">Cursos / Talleres Imperial Academy</option>
+                <option value="Otro Servicio Personalizado">Otro Servicio Personalizado</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fecha">Fecha Límite de Entrega *</label>
+              <input type="text" id="fecha" required placeholder="Ej. En 5 días / Viernes 25 / Urgente" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="detalles">Detalles del Trabajo (Tema, páginas requeridas, formato, indicaciones del profesor) *</label>
+            <textarea id="detalles" rows="4" required placeholder="Describe brevemente el tema, número aproximado de páginas o diapositivas y cualquier especificación especial..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer; font-size: 1.05rem; padding: 1.1rem;">
+            Enviar Cotización al WhatsApp (+507 6811-8430) 🚀
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botón Flotante de WhatsApp Permanente -->
+  <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, tengo una consulta sobre sus servicios.'), '_blank')" class="wa-floating" title="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.6 11.6 0 0 1-5.9-1.6l-.4-.3-4.3 1.1 1.2-4.2-.3-.5A11.6 11.6 0 1 1 16 27.5zm6.4-8.7c-.3-.2-2-.9-2.3-1s-.6-.2-.8.2-.9 1.1-1.1 1.3-.4.3-.7.1a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.2-.7s.3-.4.5-.6.2-.3.3-.6 0-.4 0-.6-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.4 3.2 7.6 7.6 0 0 0 1.6 4.1 17.4 17.4 0 0 0 6.6 5.8 22.3 22.3 0 0 0 2.2.8 5.3 5.3 0 0 0 2.4.2 3.9 3.9 0 0 0 2.6-1.8 3.2 3.2 0 0 0 .2-1.8c-.2-.2-.5-.3-.8-.5z"/>
+    </svg>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://trinity-art-landing.vercel.app/" target="_blank">Trinity Art (Tienda Creativa & Artesanal)</a>
+      <a href="https://www.instagram.com/metascenter/?hl=es-la" target="_blank">Instagram Metas Center (@metascenter)</a>
+      <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo consultar directamente con un asesor.'), '_blank')">WhatsApp Directo: +507 6811-8430</a>
+    </div>
+    <p style="margin-bottom: 0.6rem;">© 2026 Trinity Art Academic • Ciudad de Panamá. Todos los derechos reservados.</p>
+    <p style="font-size: 0.8rem; color: #64748b;">Especialistas en asesoría metodológica, redacción académica, diseño y producción audiovisual asistida por IA.</p>
+  </footer>
+
+  <!-- Lógica Interactiva de Pestañas y Cotizador -->
+  <script>
+    function openTab(evt, tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    function enviarCotizacion(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const categoria = document.getElementById('categoria').value;
+      const fecha = document.getElementById('fecha').value.trim() || 'Flexible';
+      const detalles = document.getElementById('detalles').value.trim();
+
+      const mensaje = `Hola *Trinity Art Academic*, solicito una cotización formal:\n\n` +
+                      `👤 *Cliente:* ${nombre}\n` +
+                      `📍 *Contacto/Ubicación:* ${telefono}\n` +
+                      `📚 *Servicio:* ${categoria}\n` +
+                      `📅 *Fecha requerida:* ${fecha}\n` +
+                      `📝 *Detalles del trabajo:*\n${detalles}\n\n` +
+                      `_Enviado desde el portal web oficial Trinity Art Academic_`;
+
+      window.open(waLink(mensaje), '_blank');
+    }
+  </script>
+</body>
+</html>
