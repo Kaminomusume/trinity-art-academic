@@ -743,16 +743,16 @@
 
       <div class="tabs">
         <button class="tab-btn active" onclick="openTab(event, 'universitarios')">
-          🎓 Trabajos Universitarios & Posgrado
+          Trabajos Universitarios & Posgrado
         </button>
         <button class="tab-btn" onclick="openTab(event, 'escolares')">
-          🎒 Trabajos Escolares & Bachillerato
+          Trabajos Escolares & Bachillerato
         </button>
         <button class="tab-btn" onclick="openTab(event, 'audiovisual')">
-          🎬 Audiovisual & IA Educativa
+          Audiovisual & IA Educativa
         </button>
         <button class="tab-btn" onclick="openTab(event, 'consultoria')">
-          📊 Análisis & Corrección
+          Análisis & Corrección
         </button>
       </div>
 
@@ -771,7 +771,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito cotizar asesoría para una tesis o proyecto de grado universitario.'), '_blank')" class="card-cta">
-            Cotizar Tesis por WhatsApp 💬
+            Cotizar Tesis por WhatsApp 
           </a>
         </div>
 
@@ -805,7 +805,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo cotizar un ensayo crítico o artículo universitario.'), '_blank')" class="card-cta">
-            Cotizar Ensayo por WhatsApp 💬
+            Cotizar Ensayo por WhatsApp 
           </a>
         </div>
       </div>
@@ -825,7 +825,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito cotizar un trabajo o tarea escolar.'), '_blank')" class="card-cta">
-            Consultar Trabajo Escolar 💬
+            Consultar Trabajo Escolar 
           </a>
         </div>
 
@@ -842,7 +842,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, me interesa cotizar un tríptico, lámina o material escolar visual.'), '_blank')" class="card-cta">
-            Consultar Tríptico / Lámina 💬
+            Consultar Tríptico / Lámina 
           </a>
         </div>
 
@@ -858,7 +858,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo cotizar una presentación para exposición escolar.'), '_blank')" class="card-cta">
-            Consultar Presentación 💬
+            Consultar Presentación 
           </a>
         </div>
       </div>
@@ -931,7 +931,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, necesito cotizar corrección de estilo y normas APA para mi documento.'), '_blank')" class="card-cta">
-            Cotizar Corrección APA 💬
+            Cotizar Corrección APA 
           </a>
         </div>
 
@@ -971,7 +971,7 @@
       <!-- Separación de Marca: Trinity Art Handmade vs Academic -->
       <div class="separation-banner">
         <div class="separation-text">
-          <h4>🎨 ¿Buscas artículos artesanales, libretas y diseño creativo?</h4>
+          <h4> ¿Buscas artículos artesanales, libretas y diseño creativo?</h4>
           <p>Para encuadernación, journals físicos, agendas y detalles hechos a mano, visita nuestra tienda principal de Trinity Art.</p>
         </div>
         <a href="https://trinity-art-landing.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="border-color: rgba(230, 57, 70, 0.5);">
@@ -1004,7 +1004,7 @@
             </ul>
           </div>
           <a href="#" onclick="window.open(waLink('Hola, deseo información sobre los talleres y programas de Imperial Academy.'), '_blank')" class="btn-primary">
-            Consultar Programas de Imperial Academy 💬
+            Consultar Programas de Imperial Academy 
           </a>
         </div>
 
@@ -1086,7 +1086,7 @@
           </div>
 
           <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer; font-size: 1.05rem; padding: 1.1rem;">
-            Enviar Cotización al WhatsApp (+507 6811-8430) 🚀
+            Enviar Cotización al WhatsApp
           </button>
         </form>
       </div>
@@ -1104,7 +1104,7 @@
   <footer>
     <div class="footer-links">
       <a href="https://trinity-art-landing.vercel.app/" target="_blank">Trinity Art (Tienda Creativa & Artesanal)</a>
-      <a href="https://www.instagram.com/metascenter/?hl=es-la" target="_blank">Instagram Metas Center (@metascenter)</a>
+      <a href="https://www.instagram.com/metascenter/?hl=es-la" target="_blank">Instagram Metas Center </a>
       <a href="#" onclick="window.open(waLink('Hola Trinity Art Academic, deseo consultar directamente con un asesor.'), '_blank')">WhatsApp Directo: +507 6811-8430</a>
     </div>
     <p style="margin-bottom: 0.6rem;">© 2026 Trinity Art Academic • Ciudad de Panamá. Todos los derechos reservados.</p>
@@ -1129,11 +1129,11 @@
       const detalles = document.getElementById('detalles').value.trim();
 
       const mensaje = `Hola *Trinity Art Academic*, solicito una cotización formal:\n\n` +
-                      `👤 *Cliente:* ${nombre}\n` +
-                      `📍 *Contacto/Ubicación:* ${telefono}\n` +
-                      `📚 *Servicio:* ${categoria}\n` +
-                      `📅 *Fecha requerida:* ${fecha}\n` +
-                      `📝 *Detalles del trabajo:*\n${detalles}\n\n` +
+                      `*Cliente:* ${nombre}\n` +
+                      `*Contacto/Ubicación:* ${telefono}\n` +
+                      `*Servicio:* ${categoria}\n` +
+                      `*Fecha requerida:* ${fecha}\n` +
+                      `*Detalles del trabajo:*\n${detalles}\n\n` +
                       `_Enviado desde el portal web oficial Trinity Art Academic_`;
 
       window.open(waLink(mensaje), '_blank');
